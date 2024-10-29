@@ -84,9 +84,9 @@ import fs from "fs"; // Import the fs module
 import { BlobServiceClient, AnonymousCredential } from "@azure/storage-blob";
 import uniqid from "uniqid";
 
-const AZURE_STORAGE_SAS_URL = process.env.AZURE_STORAGE_SAS_URL;
-const AZURE_BLOB_STORAGE_CONTAINER_NAME = process.env.AZURE_BLOB_STORAGE_CONTAINER_NAME;
-const AZURE_STORAGE_ACCOUNT_NAME = process.env.AZURE_STORAGE_ACCOUNT_NAME;
+const AZURE_STORAGE_SAS_URL = "https://imagessf.blob.core.windows.net/sfimages?sp=racw&st=2024-10-29T21:03:55Z&se=2024-11-03T05:03:55Z&sv=2022-11-02&sr=c&sig=gPM0u%2BdhxY2FjueKz4%2BICCWZLj9jRzX4WMpYLXs%2BKJU%3D";
+const AZURE_BLOB_STORAGE_CONTAINER_NAME = "sfimages";
+const AZURE_STORAGE_ACCOUNT_NAME = "imagessf"
 
 const uploadImageToAzure = async (file) => {
     try {
